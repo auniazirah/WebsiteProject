@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Experience</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .experience-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: orchid;
+        }
+        .card h4 {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        .skills {
+            margin: 30px auto;
+            max-width: 60%;
+            color: white;
+        }
+        .skill {
+            margin-bottom: 15px;
+        }
+        .skill label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .progress-bar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 20px;
+            background: rgb(209, 105, 105);
+            transition: width 1.5s ease-in-out;
+        }
+    
+    </style>
 </head>
 <body>
     <header>
@@ -15,33 +73,50 @@
         <a href="index.html">Home</a>
         <a href="biodata.html">Myself</a>
         <a href="experience.html">Experience</a>
+        <a href="family.html">Family</a>
         <a href="music.html">Music</a>
-        <a href="food.html">Food</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
 
     <main>
-        <h2>Experience Table</h2>
-        <table>
-            <tr>
-                <th>Year</th>
-                <th>Position</th>
-                <th>Company</th>
-            </tr>
-            <tr>
-                <td>2023</td>
-                <td>Intern</td>
-                <td>ABC Corp</td>
-            </tr>
-            <tr>
-                <td>2024</td>
-                <td>Junior Developer</td>
-                <td>XYZ Ltd</td>
-            </tr>
-        </table>
+        <div class="box">
+            <h2>Experience Highlights</h2>
+            <section class="experience-cards">
+                <div class="card">
+                    <h3>2021</h3>
+                    <h4>Modelling in Couple of Local Brands</h4>
+                    <p>Represented the brand in photoshoots and promotional campaigns, showcasing their clothing line with professionalism and confidence.</p>
+                </div>
+                <div class="card">
+                    <h3>2024</h3>
+                    <h4>Internship</h4>
+                    <p>Led frontend optimization and improved website performance.</p>
+                </div>
+            </section>
+        </div>
+
+        <div>
+        <section class="skills">
+            <h2>Skills Acquired</h2>
+            <div class="skill">
+                <label>HTML & CSS</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>&copy; 2024 Auni Azirah. All rights reserved.</p>
     </footer>
 </body>
 </html>
+

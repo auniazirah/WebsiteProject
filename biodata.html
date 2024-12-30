@@ -1,36 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - Biodata</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>About Me</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website - Biodata</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+       
+        table, td, tr, th
+            {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 15px;
+            }
+        td
+            {
+                text-align: left;
+                background-color: rgb(185, 92, 92);
+            }    
+        th
+            {
+                background-color: rgb(83, 0, 0);
+            }
+    </style>
+
+    <body>
+        <header>
+            <h1>About Me</h1>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Myself</a>
+            <a href="experience.html">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+
+        <main>
+            <div class="box">
+                <h2>Personal Information</h2>
+                <div class="gallery">
+                    <a href="images/gmb dekat studio.jpg">
+                        <img src="images/gmb dekat studio.jpg" alt="Profile Picture" class="curved-rectangle"
+                        width="25%" border="2" hspace="30" vspace="20">
+                    </a>
+                </div>
+                <blockquote align="justify">
+                    Hey there! Im <b>Nur Auni Azirah Binti Abdul Aziz</b>, Im also a student in UiTM by day and a reader by heart. My friends know me as the person who's introvert, crazy girl or “discovering new talents”. I believe in making life an adventure and enjoyable thing at a time. I’ve got a knack for making some jokes only with people Im comfortable with and Im always up for learning something new.
+                    <br>
+                    <br>
+                    When Im not studying or doing my main focus, you can find me at my bedroom reading some books or novels. Whether Im hiking up a new trail or getting lost in a great book, Im all about exploring new perspectives or having a blast while levelling up.
+                  </blockquote>
+                <table style="width: 60%;" align="center">
+                    <tr>
+                        <th>Name:</th>
+                        <td>Nur Auni Azirah Binti Abdul Aziz</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Email:</th>
+                        <td>nnurauniazirah@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Yoniesaige@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Mobile No:</th>
+                        <td>019-370-0466</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth:</th>
+                        <td>03 October 2004</td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <th>Nationality:</th>
+                        <td>Melayu</td>
+                    </tr>
+                    <tr>
+                        <th>Religion:</th>
+                        <td>Islam</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="box">
+                <h2>Educational Qualification</h2>
+                <table style="width: 60%;" align="center">
+                    
+                    <tr>
+                        <th>Year</th>
+                        <th>Education</th>
+                    </tr>
     
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="biodata.html">Myself</a>
-        <a href="experience.html">Experience</a>
-        <a href="music.html">Music</a>
-        <a href="food.html">Food</a>
-    </nav>
+                    <tr>
+                        <td>2011</td>
+                        <td>SK Bukit Sentosa (UPSR)</td>
+                    </tr>
 
-    <main>
-        <h2>Personal Information</h2>
-        <ul>
-            <li><b>Name:</b> [Your Name]</li>
-            <li><b>Age:</b> [Your Age]</li>
-            <li><b>Education:</b> [Your Education]</li>
-            <li><b>Hobbies:</b> [Your Hobbies]</li>
-        </ul>
-    </main>
+                    <tr>
+                        <td>2017</td>
+                        <td>SMK Bukit Sentosa 2 (SPM)</td>
+                    </tr>
 
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
-</body>
+                    <tr>
+                        <td>Upcoming</td>
+                        <td>Diploma in Information Management (UiTM Kampus Rembau)</td>
+                    </tr>
+                </table>
+            </div>
+
+            
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Auni Azirah. All rights reserved.</p>
+        </footer>
+
+    </body>
 </html>

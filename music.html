@@ -6,6 +6,138 @@
         <title>My Website - Music</title>
         <link rel="stylesheet" href="style.css">
     </head>
+
+    <style>
+            .music-card {
+                display: flex;
+                align-items: center;
+                background: #1c1c1e;
+                border-radius: 15px;
+                overflow: hidden;
+                color: white;
+                margin: 20px auto;
+                max-width: 600px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .music-card-content {
+                padding: 20px;
+                flex: 2;
+            }
+
+            .music-card-content .pre-add {
+                font-size: 0.8em;
+                color: #aaa;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+
+            .music-card-content .song-title {
+                font-size: 1.5em;
+                margin: 5px 0;
+            }
+
+            .music-card-content .artist-name {
+                font-size: 1em;
+                margin: 5px 0;
+                color: #ccc;
+            }
+
+            .music-card-content .description {
+                font-size: 0.9em;
+                margin-top: 10px;
+            }
+
+            .music-card-image {
+                position: relative;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .music-card-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .play-button {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background: linear-gradient(135deg, #6b92ff, #ff4d6d);
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                z-index: 10;
+            }
+
+            .play-button img {
+                width: 60%;
+                height: 60%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            @keyframes fadeInGlow {
+                0% {
+                    opacity: 0;
+                    text-shadow: 0 0 5px transparent;
+                }
+                100% {
+                    opacity: 1;
+                    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+                }
+            }
+
+            h2 {
+                font-size: 2.0em;
+                color: #ffffff;
+                text-align: center;
+                animation: fadeInGlow ease-in-out forwards;
+            }
+
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const playButtons = document.querySelectorAll('.play-button');
+            
+            playButtons.forEach(button => {
+                const audio = button.closest('.music-card').querySelector('.audioPlayer');
+                const playIcon = button.querySelector('img');
+
+                button.addEventListener('click', () => {
+                    // Pause all other audios
+                    document.querySelectorAll('.audioPlayer').forEach(a => {
+                        if (a !== audio) {
+                            a.pause();
+                            a.closest('.music-card').querySelector('.play-button img').src = 'images/play-button.jpg';
+                        }
+                    });
+
+                    // Play or pause the selected audio
+                    if (audio.paused) {
+                        audio.play().catch(error => console.error("Audio play failed:", error));
+                        playIcon.src = 'images/pause-button.jpg';
+                    } else {
+                        audio.pause();
+                        playIcon.src = 'images/play-button.jpg';
+                    }
+                });
+            });
+        });
+
+    </script>
+
     <body>
         <header>
             <h1>My Music Taste</h1>
@@ -15,21 +147,92 @@
             <a href="index.html">Home</a>
             <a href="biodata.html">Myself</a>
             <a href="experience.html">Experience</a>
+            <a href="family.html">Family</a>
             <a href="music.html">Music</a>
-            <a href="food.html">Food</a>
+            <a href="gallery.html">Gallery</a>
         </nav>
 
         <main>
-            <h2>Favorite Music</h2>
+            <div class="box">
+                <h2>Favorite Music</h2>
 
-            <audio controls>
-                <source src="audio/SonaOne - Firefly (Official Music Video).mp3" type="audio/mp3">
-                Your browser does not support audio.
-            </audio>
+                    <!-- Song 1 -->
+                    <div class="music-card">
+                        <div class="music-card-content">
+
+                            <h3 class="song-title">Firefly</h3>
+                            <p class="artist-name">Sonaone</p>
+
+                        </div>
+
+                        <div class="music-card-image">
+                            <img src="images/sonaone.png" alt="Sonaone">
+                            
+                            <button class="play-button">
+                                <img src="images/play-button.jpg" alt="Play">
+                            </button>
+                        </div>
+
+                        <audio class="audioPlayer">
+                            <source src="audio/SonaOne - Firefly (Official Music Video).mp3" type="audio/mp3">
+                            Your browser does not support audio playback.
+                        </audio>
+                    </div>
+                
+                    <!-- Song 2 -->
+                    <div class="music-card">
+                        <div class="music-card-content">
+                            <h3 class="song-title">Hello</h3>
+                            <p class="artist-name">Andi Bernadee & Ismail Izzani</p>
+                        </div>
+
+                        <div class="music-card-image">
+                            <img src="images/andi & ismail.png" alt="Andi Bernadee & Ismail Izzani">
+                            <button class="play-button">
+                                <img src="images/play-button.jpg" alt="Play">
+                            </button>
+                        </div>
+
+                        <audio class="audioPlayer">
+                            <source src="audio/Ismail Izzani & Andi Bernadee - Hello (Official Lyrics Video).mp3" type="audio/mp3">
+                            Your browser does not support audio playback.
+                        </audio>
+                    </div>
+
+                    <!-- Song 2 -->
+                    <div class="music-card">
+                        <div class="music-card-content">
+                            <h3 class="song-title">Sounds</h3>
+                            <p class="artist-name">Kanye West ft. Juice WRLD & Travis Scott</p>
+                        </div>
+
+                        <div class="music-card-image">
+                            <img src="images/kanye west.jpg" alt="Kanye West ft. Juice WRLD & Travis Scott">
+                            <button class="play-button">
+                                <img src="images/play-button.jpg" alt="Play">
+                            </button>
+                        </div>
+
+                        <audio class="audioPlayer">
+                            <source src="audio/Kanye West - Sounds ft. Juice WRLD and Travis Scott.mp3" type="audio/mp3">
+                            Your browser does not support audio playback.
+                        </audio>
+                    </div>
+                
+            </div>
+
+            <div class="box">
+                <h2>My Late Night Playlist</h2>
+                <tr>
+                    <td>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4qmrjNXiiyNpYNaPxw1p10?utm_source=generator&theme=0" width="90%" height="452" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </td>
+                </tr>
+            </div>
         </main>
-        
+
         <footer>
-            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <p>&copy; 2024 Auni Azirah. All rights reserved.</p>
         </footer>
     </body>
 </html>
