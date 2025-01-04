@@ -56,9 +56,9 @@ nav a:hover {
 
 .gallery-container {
     display: flex;
-    justify-content: center; /* Center the items */
+    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; /* Allow items to wrap to the next line if necessary */
+    flex-wrap: wrap; 
     margin: 20px 0;
 }
 

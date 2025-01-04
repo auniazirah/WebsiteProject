@@ -61,6 +61,24 @@
             background: rgb(209, 105, 105);
             transition: width 1.5s ease-in-out;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 15px;
+            background: rgb(104, 32, 46, 0.975);
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
     
     </style>
 </head>
@@ -95,7 +113,7 @@
             </section>
         </div>
 
-        <div>
+        
         <section class="skills">
             <h2>Skills Acquired</h2>
             <div class="skill">
@@ -111,7 +129,17 @@
                 </div>
             </div>
         </section>
+        
+        <div class="box image-container">
+            <p>
+                <img src="images/PPD Hulu Selangor.png" usemap="#image-map" class="responsive-image">
+                <map name="image-map">
+                    <area target="_blank" alt="PPD Hulu Selangor" title="PPD Hulu Selangor" href="https://ppdhs.com/v1/" coords="936,428,45" shape="circle">
+                </map>
+            </p>
         </div>
+        
+
     </main>
 
     <footer>
